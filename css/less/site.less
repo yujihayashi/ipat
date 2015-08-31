@@ -1,6 +1,7 @@
-@primary-color: #812d2a; 
-@secondary-color: #089bdf;  
-@third-color: #b6967e;  
+@primary-color: #0397dd; 
+@secondary-color: #ffea91;  
+@third-color: #a4b9cc;
+@gray: #656668;
 /*
 FUNÇÕES PADRÕES START
 *********************************************************************/
@@ -42,7 +43,9 @@ a, button  {transition: all 0.25s ease 0s;}
 /*
 FONTS START
 **********************************************************************************************/
-.btn {font-family: 'robotoblack', Arial, sans-serif;font-weight: normal;}
+.btn {font-family: 'latolight', Arial, sans-serif;font-weight: normal;}
+.site-header .nav {font-family: 'MyriadproRegular', Arial, sans-serif;font-weight: normal;}
+.box-tratamento .title, .site-header {font-family: 'latobold', Arial, sans-serif;font-weight: normal;}
 /**********************************************************************************************
 FONTS END
 */
@@ -51,14 +54,105 @@ ESTRUTURA START
 **********************************************************************************************/
 .extra-header, .extra-central, .extra-footer {min-width: 960px;}
 .extra-header {
-	.site-header {}
-	.navbar {border:0;margin:0;.border-radius(0);}
+    .site-header {}
+    .navbar {border:0;margin:0;.border-radius(0);}
+    .navbar-header {
+        + .nav {margin-left: 40px;}
+    }
+    .navbar-brand {padding:12px 10px;}
+    .nav {
+        font-size: 16px;text-transform: uppercase;padding:29px 0;
+        > li {
+            a {padding-top:5px;padding-bottom: 5px;}
+            &.active {
+                a {border:2px solid #afafaf;.border-radius(5px);}
+            }
+        }
+    }
+    .navbar-right {
+        font-size: 22px;padding:26px 0;
+        > li {
+            a {color: #64acdc;padding-top:10px;padding-bottom: 10px;}
+            + li {background: url(../imagem/site/dotted-v.png) repeat-y left top;}
+        }
+    }
+    .contato {
+        text-transform: lowercase;text-align: center;line-height: .9;
+        a {padding-top:2px !important;padding-bottom: 2px !important;}
+        .fa {color: #afafaf;font-size: 24px;font-weight: normal;}
+        span {display: block;font-size: 14px;line-height: .9;}
+    }
 }
 .extra-central {
-	.site-central {}
+    .site-central {}
 }
 .extra-footer {
-	.site-footer {}
+    .site-contato {
+        background: #FFF;padding:72px 0 60px;
+        a {color: #ff0000;}
+        .media-list {
+            .fa {color: #b2b3b5;}
+        }
+        .site-title {
+            font-size: 70px;margin-top:0;background: url(../imagem/site/contato-lg.png) no-repeat center;min-height: 140px;text-transform: uppercase;text-align: center;padding:30px 0;margin:0 0 20px;
+        }
+        .site-subtitle {font-size: 42px;}
+        .text-phone {font-size: 56px;line-height: .6;letter-spacing: -1px;}
+        form {
+            margin:0 0 20px;position: relative;
+            .mensagem {background: #FFF url(../imagem/site/envelope.png) no-repeat 30px 28px;padding:30px 15px 15px 84px}
+            .form-content {
+                .border-radius(10px);overflow: hidden;
+                .arrow {position: absolute;left: -9px;top: 34px;}
+            }
+            .form-group {
+                margin:0;
+                + .form-group {border-top:1px solid #e8edf8;}
+            }
+            .half {
+                float: left;width: 50%;border-top:1px solid #e8edf8;
+                + .half {border-left: 1px solid #e8edf8;}
+            }
+            .form-control {.border-radius(0);background-color: #f1f3f4;}
+            input.form-control {height: 60px;}
+            .btn {border-width: 3px;.border-radius(5px);margin:20px 0;display: block;}
+        }
+    }
+    .social-footer {
+        a {
+            color: #ff0000;
+            + a {margin-left: 30px;}
+        }
+    }
+    .site-newsletter {
+        background: url(../imagem/site/bg-newsletter.png) no-repeat center top #6d69aa;color: #FFF;
+        .box-header {padding: 52px 0 0 42px;}
+        .box-title {font-size: 19px;margin:0;}
+        .form-inline {
+            .content {background: #FFF;.border-radius(5px);}
+            .form-control {width: 480px;}
+            .btn {font-size: 25px;color: #6d69aa;}
+        }
+        .box-content {padding:42px 0 32px;}
+    }
+    .site-footer {
+        text-align: center;background: url(../imagem/site/bg-footer.jpg) no-repeat center;background-size:cover;
+        &, a {color: #FFF;}
+        .extra {background: url(../imagem/site/bg-tooth.png) repeat-x top;}
+        .content {padding:176px 80px 114px;}
+    }
+    .logo-footer {margin-bottom: 30px;}
+    .parceiros {
+        margin:30px 0;
+        a, span {
+            display: inline-block;vertical-align: middle;
+            + a, + span {margin-left: 30px;}
+        }
+    }
+    .direitos {font-size: 14px;}
+}
+.interna {
+    .site-central {padding:0 0 40px;}
 }
 /**********************************************************************************************
 ESTRUTURA END
@@ -67,8 +161,53 @@ ESTRUTURA END
 CLASSES START
 **********************************************************************************************/
 [class^='lista-'], [class^='lista-'], [class^='menu-'], [class^='menu-'] ul, .cycle-slideshow {list-style:none;margin-bottom:0;padding-left:0;}
-.btn-gray {background: #EEE;color:#C93F2A;}
-.btn-rounded {-webkit-border-radius: 150px;-moz-border-radius: 150px;border-radius: 150px;}
+.btn {text-transform: uppercase;font-size: 20px;border-width: 3px;}
+.btn-lg {padding:12px 40px;}
+.btn-black {
+    border-color: #000;color: #000;
+    &:hover {color: lighten(#000, 40%);border-color: lighten(#000, 40%);}
+}
+.btn-danger {
+    background-color: transparent;
+    &:hover {background-color: transparent;}
+}
+.btn-gray {background: transparent;color:#76b8e1;border:3px solid #f0f0f0;.border-radius(5px);padding:10px 20px;}
+.btn-circle {-webkit-border-radius: 150px;-moz-border-radius: 150px;border-radius: 150px;}
+
+.box-banner {
+    background: url(../imagem/site/banner-01.jpg) no-repeat center top;color: #FFF;text-align: center;
+    &, .cycle-slideshow, .cycle-slideshow li {width: 100%;height: 490px;}
+    .cycle-slideshow {position: relative;}
+    .site-header {font-size: 36px;margin:0 0 10px;}
+    .content {position: absolute;left: 0;right: 0;bottom: 0;padding:0 80px 84px;text-shadow:1px 1px 7px #000}
+    .site-heade {font-size: 42px;}
+}
+.box-curso, .box-caminhar, .box-tratamento {
+    text-align: center;padding:60px 0;
+    .box-header {
+        .box-title {font-size: 70px;margin:0;padding:0;text-transform: uppercase;}
+    }
+}
+.box-curso {
+    .box-header {
+        height: 151px;background: url(../imagem/site/curso-lg.png) no-repeat center;padding:38px 0;margin:0 0 30px;
+    }
+}
+.box-tratamento {
+    background: #f38b33;
+    &, a {color: #FFF;}
+    .box-header {
+        margin:0 0 60px;
+        .box-title {font-size: 80px;}
+    }
+    .imagem {min-height: 100px;}
+    .title {text-transform: uppercase;font-size: 26px;}
+    .content {font-size: 15px;line-height: 1.7;padding:0 6px;}
+}
+.box-caminhar {
+    background: #7570b3 url(../imagem/site/bg-caminhar.jpg) no-repeat center;background-size: cover;
+    &, a {color: #FFF;}
+}
 
 .cycle-slideshow {
     li {
@@ -76,8 +215,19 @@ CLASSES START
     }
 }
 .cycle-nav {
-	span {display: inline-block;cursor: pointer;}
+    span {display: inline-block;cursor: pointer;}
 }
+.date {
+    display: inline-block;
+    > span {vertical-align: middle;}
+    span {display: inline-block;}
+    .date-start, .date-end {text-align: center;}
+    .day, .month {display: block;line-height: .7;}
+    .trace {font-size: 36px;margin-left: 10px;}
+    .day {font-size: 41px;}
+    .month {font-size: 36px;}
+}
+
 
 .form-control {box-shadow:none;}
 
@@ -87,10 +237,39 @@ CLASSES START
 [class^='ycon-'], [class*='ycon-'] {background-repeat:no-repeat;vertical-align:middle;display:inline-block;background-image:url(../imagem/site/ycon.png);}
 
 
+.noticia-title {font-size: 70px;margin:40px 0 0;}
+.noticia-resumo {font-size: 28px;color: #bebebe;margin:0 0 20px;}
+
+
+.page-header {
+    background: url(../imagem/site/bg-header.jpg) no-repeat center top;height: 241px;margin:0;padding:52px 0;border:0;
+    h1, h2, h3 {
+        margin:0;text-align: center;font-size: 94px;display: block;
+        &, a {color: #FFF;}
+        > span {display: inline-block;vertical-align: middle;}
+        .normal {font-size: 42px;}
+    }
+}
 .pixel {width: 100%;height: 100%;}
 
+
 .space {width:1%;display:inline-block;height:100%;vertical-align:middle;}
+.resumo {font-size: 18px;text-transform: uppercase;color: #d1d1d1;text-align: center;background: url(../imagem/site/bg-resumo.png) no-repeat center top;height: 99px;padding-top:30px;margin:0 0 30px;}
 .relative {position: relative;}
+.pagination {
+    width: 100%;text-align: center;
+    > li {
+        display: inline-block;
+        a, span {border:0;}
+    }
+}
+
+.text-content {
+    padding:60px 0;
+    .media {
+        .pull-left {padding-right: 50px;}
+    }
+}
 /**********************************************************************************************
 CLASSES END
 */

@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
-	<title>Projeto</title>
+	<title>IPAT</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=960, user-scalable=yes">
 	<link rel="shortcut icon" href="/imagem/favicon.png" type="image/png" />
@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="/library/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/fonts/stylesheet.css">
 	<link rel="stylesheet" href="/imagem/site/ycon.css">
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/css/site.css">
 	<script type="text/javascript" src="/library/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="/library/bootstrap/js/bootstrap.min.js"></script>
@@ -37,82 +38,272 @@
 					<div class="container">
 						<nav class="navbar navbar-default" role="navigation">
 							<div class="navbar-header">
-								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-									<span class="sr-only">Toggle navigation</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-								<a class="navbar-brand" href="/" title="Voltar para a página inicial">Title</a>
+								<a class="navbar-brand" href="/" title="Voltar para a página inicial"><img src="/imagem/site/ipat.png" alt="Logo IPAT"></a>
 							</div>
-							<div class="collapse navbar-collapse navbar-ex1-collapse">
-								<ul class="nav navbar-nav">
-									<li class="active"><a href="#">Link</a></li>
-									<li><a href="#">Link</a></li>
-								</ul>
-								<form class="navbar-form navbar-left" role="search">
-									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Search">
-									</div>
-									<button type="submit" class="btn btn-default">Submit</button>
-								</form>
-								<ul class="nav navbar-nav navbar-right">
-									<li><a href="#">Link</a></li>
-									<li class="dropdown">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-										<ul class="dropdown-menu">
-											<li><a href="#">Action</a></li>
-											<li><a href="#">Another action</a></li>
-											<li><a href="#">Something else here</a></li>
-											<li><a href="#">Separated link</a></li>
-										</ul>
-									</li>
-								</ul>
-							</div><!-- /.navbar-collapse -->
+							<ul class="nav navbar-nav">
+								<li class="active"><a href="/">Home</a></li>
+								<li><a href="#">O Instituto</a></li>
+								<li><a href="#">O curso</a></li>
+								<li><a href="#">O tratamento</a></li>
+								<li><a href="#">Contato</a></li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="#" title="Acesse nosso Twitter"><i class="fa fa-twitter"></i><span class="sr-only">Twitter</span></a></li>
+								<li><a href="#" title="Acesse nosso Facebook"><i class="fa fa-facebook"></i><span class="sr-only">Facebook</span></a></li>
+								<li><a href="#" title="Acesse nosso Instagram"><i class="fa fa-instagram"></i><span class="sr-only">Instagram</span></a></li>
+							</ul>
+
 						</nav>
 					</div> <!-- .container -->
 				</div> <!-- .site-header -->
 			</header> <!-- .extra-header -->
 			<div class="extra-central">
 				<div class="site-central" id="content">
-					<div class="container">
-						<div class="box-banner">
-							<div class="cycle-btn">
-								<div class="container">
-									<a href="javascript:void(0);" class="cycle-prev"><span class="icone-nav-left"></span><span class="sr-only">Banner anterior</span></a>
-									<a href="javascript:void(0);" class="cycle-next"><span class="icone-nav-right"></span><span class="sr-only">Próximo banner</span></a>
-
-									<div class="cycle-nav"></div> <!-- .cycle-nav -->
-								</div> <!-- .container -->
-							</div> <!-- .cycle-btn -->
-							<ul class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="5000" data-cycle-speed="1800" data-cycle-slides="> li" data-cycle-pager=".box-banner .cycle-nav" data-cycle-next=".box-banner .cycle-next" data-cycle-prev=".box-banner .cycle-prev" data-cycle-easing="easeInOutExpo" data-cycle-log="false" data-cycle-swipe="true">
+					<div class="box-banner">
+						<div class="container">
+							<ul class="cycle-slideshow">
 								<li>
-									banner 01
-								</li>
-								<li>
-									banner 01
+									<div class="content">
+										<h1 class="site-header">
+											Excelência no Tratamento Butolínico
+										</h1>
+										<div class="desc">
+											<p>
+												O IPAT propõe um excelente tratamento na área de toxina botulínica, onde diversos 
+												especialistas atuam em busca de resultados satisfatórios para o paciente. O Hospital Universitário Bettina de Souza (HUBFS) tem se tornado referência neste procedimento no país. 
+											</p>
+											<a href="#" class="btn btn-default btn-lg plus" title="Saiba mais">Saiba mais</a>
+										</div> <!-- .desc -->
+									</div> <!-- .content -->
 								</li>
 							</ul>
-						</div> <!-- .box-banner -->
-					</div> <!-- .container -->
+						</div> <!-- .container -->
+					</div> <!-- .box-banner -->
+					<div class="box-curso">
+						<div class="container">
+							<div class="box-header">
+								<h2 class="box-title">O curso</h2>
+							</div> <!-- .box-header -->
+							<div class="box-content">
+								<div class="row">
+									<div class="col-xs-8 col-xs-offset-2">
+										<p>
+											Por meio do IPAT, o Hospital Universitário Bettina Ferro de Souza (HUBFS), além do atendimento à comunidade, também ministra cursos de aplicação da medicação da Toxina Butolínica aos médico da região e fora dela, para que os mesmos possam desenvolver o seu atentimento multidisciplinar.
+										</p>
+										<a href="#" class="btn btn-default btn-black btn-lg" title="Saiba mais">Saiba como se dá o tratamento</a>
+									</div> <!-- .col-xs-8 -->
+								</div> <!-- .row -->
+							</div> <!-- .box-content -->
+						</div> <!-- .container -->
+					</div> <!-- .box-curso -->
+					<div class="box-tratamento">
+						<div class="container">
+							<div class="box-header">
+								<h2 class="box-title">O tratamento</h2>
+							</div> <!-- .box-header -->
+							<div class="box-content">
+								<div class="row">
+									<div class="col-xs-4">
+										<div class="content">
+											<div class="imagem">
+												<img src="/imagem/site/toxina.png" alt="toxina">
+											</div> <!-- .imagem -->
+											<h3 class="title">A toxina butolínica</h3>
+											<p>
+												A toxina botulínica é uma substância que enfraquece o músculo estatático que está tenso no paciente. O procedimento começa com uma injenção intramuscular que exige um conhecimento detalhado do profissional que está aplicando, sobre anatomia do músculo, a fim de que se alcance o local desejado pela deposição da medicação.
+											</p>
+										</div> <!-- .content -->
+									</div> <!-- .col-xs-4 -->
+									<div class="col-xs-4">
+										<div class="content">
+											<div class="imagem">
+												<img src="/imagem/site/aplicacao.png" alt="aplicação">
+											</div> <!-- .imagem -->
+											<h3 class="title">A aplicação</h3>
+											<p>
+												A aplicação diminui a força de contração desse músculo bloqueando os neurotransmissores e relaxando a área. A grande vantagem do tratamento é que na maioria dos casos  pode ser feito em tratamento ambulatorial, sem necessidade de internação. 
+											</p>
+										</div> <!-- .content -->
+									</div> <!-- .col-xs-4 -->
+									<div class="col-xs-4">
+										<div class="content">
+											<div class="imagem">
+												<img src="/imagem/site/avaliacao.png" alt="avaliação">
+											</div> <!-- .imagem -->
+											<h3 class="title">Avaliação clínica</h3>
+											<p>
+												Antes de realizar o tratamento, é preciso que seja feita uma análise individual de cada paciente, uma vez que, ser portador de espasticidade muscular não pod  e ser o único critério a ser levado em consideração no momento da decisão da utilização da Toxina Botulínica. O tratamento também deve ser iniciado logo no começo do problema, pois quanto mais cedo for tratado, melhor é a recuperação. 
+											</p>
+										</div> <!-- .content -->
+									</div> <!-- .col-xs-4 -->
+								</div> <!-- .row -->
+							</div> <!-- .box-content -->
+						</div> <!-- .container -->
+					</div> <!-- .box-tratamento -->
+					<div class="box-caminhar">
+						<div class="container">
+							<div class="box-header">
+								<h2 class="box-title">Projeto Caminhar</h2>
+							</div> <!-- .box-header -->
+							<div class="box-content">
+								<div class="media">
+									<span class="pull-left">
+										<span>16</span>
+										<span>mil</span>
+										<span>por ano</span>
+										<span>é o número de crianças atendidas em média</span>
+									</span>
+									<div class="media-body">
+										<p>
+											O Projeto Caminhar é um serviço que faz parte do IPAT que tem o objetivo de diagnosticar e realizar um acompanhamento clínico em crianças de até 12 anos de idade, que apresentem alterações de crescimento e desenvolvimento infantil, síndromes genéticas, epilepsias, ataxias e mucopolissacaridoses. Todos os anos, em média, 16 mil crianças são atendidas no Hospital Universitário<br>
+											Bettina Ferro de Souza (HUBFS).
+										</p>
+									</div> <!-- .media-body -->
+								</div> <!-- .media -->
+							</div> <!-- .box-content -->
+						</div> <!-- .container -->
+					</div> <!-- .box-caminhar -->
 				</div> <!-- .site-central -->
 			</div> <!-- .extra-central -->
 			<footer>
 				<div class="extra-footer">
-					<div class="site-footer">
+					<div class="site-contato">
 						<div class="container">
-							<a href="http://www.libradesign.com.br" target="_blank" title="Libra Design"><img src="/imagem/site/libra.png" alt="Logotipo Libra Design +Tech"></a>
+							<h2 class="site-title">
+								Entre em contato
+							</h2>
+							<div class="row">
+								<div class="col-xs-4">
+									<h3 class="site-subtitle hand">Mais Contatos</h3>
+									<ul class="media-list">
+										<li class="media">
+											<span class="pull-left"><span class="fa fa-phone fa-fw fa-lg"></span></span>
+											<div class="media-body">
+												<span class="text-phone hand">91. 3324 5566</span>
+											</div> <!-- .media-body -->
+										</li>
+										<li class="media">
+											<span class="pull-left"><span class="fa fa-envelope-o fa-fw fa-lg"></span></span>
+											<div class="media-body">
+												<a href="mailto:contato@ipatbr.org" title="Envie-nos um e-mail">contato@ipatbr.org</a>
+											</div> <!-- .media-body -->
+										</li>
+										<li class="media">
+											<span class="pull-left"><span class="fa fa-map-marker fa-fw fa-lg"></span></span>
+											<div class="media-body">
+												Av. Djalma Dutra, 356 Campina - Belém/PA
+											</div> <!-- .media-body -->
+										</li>
+									</ul>
+									<div class="social-footer">
+										<a href="#" target="_blank" title="Acesse nosso Facebook"><span class="sr-only">Facebook</span><span class="fa fa-facebook fa-lg"></span></a>
+										<a href="#" target="_blank" title="Acesse nosso Instagram"><span class="sr-only">Instagram</span><span class="fa fa-instagram fa-lg"></span></a>
+										<a href="#" target="_blank" title="Acesse nosso Twitter"><span class="sr-only">Twitter</span><span class="fa fa-twitter fa-lg"></span></a>
+									</div> <!-- .social-footer -->
+								</div> <!-- .col-xs-4 -->
+								<div class="col-xs-7">
+									<form action="">
+										<div class="form-content">
+											<div class="form-group">
+												<label  class="sr-only">Escreva sua mensagem</label>
+												<textarea name="" id="" rows="5" class="form-control mensagem" placeholder="Escreva sua mensagem"></textarea>
+											</div> <!-- .form-group -->
+											<div class="form-group">
+												<label  class="sr-only">E-mail:</label>
+												<input type="email" class="form-control" placeholder="E-mail:" />
+											</div> <!-- .form-group -->
+											<div class="clearfix">
+												<div class="form-group half">
+													<label  class="sr-only">Nome:</label>
+													<input type="text" class="form-control" placeholder="Nome:" />
+												</div> <!-- .form-group -->
+												<div class="form-group half">
+													<label  class="sr-only">Telefone:</label>
+													<input type="text" class="form-control" placeholder="Telefone:" />
+												</div> <!-- .form-group -->
+											</div>
+										</div> <!-- .form-content -->
+										<button type="submit" class="btn btn-danger btn-lg btn-block">Enviar mensagem</button>
+									</form>
+								</div> <!-- .col-xs-8 -->
+							</div> <!-- .row -->
 						</div> <!-- .container -->
-					</div> <!-- .site-footer -->
-				</div> <!-- .extra-footer -->
-			</footer>
-		</div> <!-- .site-geral -->
-	</div> <!-- .extra-geral -->
-	<script src="http://localhost:35729/livereload.js"></script>
-	<script>
-	jQuery(document).ready(function(){
+					</div> <!-- .site-contato -->
+					<div class="site-newsletter">
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-4">
+									<div class="box-header">
+										<h2 class="box-title">Receba nossas <span class="hand">Notícias</span></h2>
+									</div> <!-- .box-header -->								</div> <!-- .col-xs-4 -->
+									<div class="col-xs-7">
+										<div class="box-content">
+											<form action="" class="form-inline">
+												<div class="content">
+													<div class="form-group">
+														<label class="sr-only">Digite seu e-mail</label>
+														<input type="email" class="form-control input-lg" placeholder="Digite seu e-mail">
+													</div> <!-- .form-group -->
+													<button class="btn btn-link"><span class="sr-only">Enviar</span><i class="fa fa-envelope-o"></i></button>
+												</div> <!-- .content -->
+											</form>
+										</div> <!-- .box-content -->
+									</div> <!-- .col-xs-8 -->
+								</div> <!-- .row -->
+							</div> <!-- .container -->
+						</div> <!-- .site-newsletter -->
+						<div class="site-footer">
+							<div class="extra">
+								<div class="container">
+									<div class="content">
+										<div class="parceiros">
+											<a href="#" title="Saiba mais" target="_blank"><img src="/imagem/site/ipat-white.png" alt="Logo Ipat"></a>
+											<a href="http://www.unicef.org.br/" title="Saiba mais" target="_blank"><img src="/imagem/site/unicef-white.png" alt="Logo Unicef"></a>
+										</div>
+										<p clas="lead">
+											O <strong>IPAT</strong> e o <strong>Unicef</strong> trabalham juntos para que todas as escolas tenham as competências necessárias para acolher 
+											crianças portadoras de deficiência. Afinal, educação e assistência de qualidade é um direito de toda criança. 
+										</p>
+										<p class="direitos">
+											COPYRIGHT 2015. DIREITOS RESERVADOS <a href="http://www.libradesign.com.br" target="_blank" title="Libra Design"><img src="/imagem/site/libra.png" alt="Logotipo Libra Design +Tech"></a>
+										</p>
+									</div> <!-- .content -->
+								</div> <!-- .container -->
+							</div> <!-- .extra -->
+						</div> <!-- .site-footer -->
+					</div> <!-- .extra-footer -->
+				</footer>
+			</div> <!-- .site-geral -->
+		</div> <!-- .extra-geral -->
+		<script src="http://localhost:35729/livereload.js"></script>
+		<script type="text/javascript">
+		jQuery(document).ready( function ($) {
+			$('.plus').click(function () {
+				$('.card').removeClass('active');
+				$('.card').find('.static').animate({marginTop:'0px'}, {duration:800, queue: false, easing: 'easeInOutExpo'});
+				$(this).parents('.card').addClass('active');
+				$(this).parents('.card').find('.static').animate({marginTop:'-460px'}, {duration:800, queue: true, easing: 'easeInOutExpo'});
+				return false;
+			});
+			$('.card .hover').click(function () {
+				return false;
+			});
+			$('body').click(function () {
+				$('.card').removeClass('active');
+				$('.card').find('.static').animate({marginTop:'0px'}, {duration:800, queue: true, easing: 'easeInOutExpo'});
+			});
+			$('.card').hover(function () {
+				$('.card').removeClass('active');
+				$('.card').find('.static').animate({marginTop:'0px'}, {duration:800, queue: false, easing: 'easeInOutExpo'});
+				$(this).addClass('active');
+				$(this).find('.static').animate({marginTop:'-460px'}, {duration:800, queue: true, easing: 'easeInOutExpo'});
+				return false;
+			}, function () {
+				$('.card').removeClass('active');
+				$('.card').find('.static').animate({marginTop:'0px'}, {duration:800, queue: false, easing: 'easeInOutExpo'});
+			});
 
-	});
-	</script>
+		});
+</script>
 </body>
 </html>
